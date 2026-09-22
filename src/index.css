@@ -1,0 +1,704 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   ELEVATE colour theme
+   Every value below is sampled from the ELEVATE logo (the layered head, the
+   wordmark, and the idea bubbles). Ramps were generated around those samples
+   and checked for WCAG contrast — see README.md for the verified steps.
+   --------------------------------------------------------------------------- */
+
+@theme {
+  /* ---- Typeface: Lato ------------------------------------------------------
+     Lato is the face AIESEC sets its whole site in (their global rule is
+     `font-family: Lato, sans-serif`), and it is the family we match here.
+     Loaded from Google Fonts in index.html at 300/400/700/900 plus 400 italic.
+
+     Lato ships as static cuts only — there is no 500 or 600 face — so the two
+     weight tokens below are pinned to the cuts that actually exist. Without
+     them the browser silently resolves `font-medium` to 400 and
+     `font-semibold` to 700 anyway; naming it keeps the rendered weight and the
+     class name honest with each other. Type runs on two weights as a result:
+     400 for copy and UI chrome, 700 for headings and emphasis. */
+  --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif;
+  --font-weight-medium: 400;
+  --font-weight-semibold: 700;
+
+  /* ---- Display face: Anton -------------------------------------------------
+     Lato is an excellent text face and a soft display one — at hero sizes its
+     Black weight goes round rather than loud. Anton carries the shouting
+     instead: a single heavy condensed cut, which is what the uppercase titles
+     already in content.js want. "THE ACADEMIA-INDUSTRY BRIDGE" only fits at
+     display size because it is condensed.
+
+     One weight only (Anton ships nothing else), so never ask it for a bold —
+     use size and colour for emphasis instead. Set through `.display` below,
+     which carries the optical corrections Anton needs at scale. */
+  --font-display: "Anton", "Arial Narrow", ui-sans-serif, sans-serif;
+
+  /* ---- Brand: Elevate Blue -------------------------------------------------
+     #146FB3 is the wordmark and the upper head. It sits at 600 so that the
+     exact logo blue is the one doing the work on buttons and links. */
+  --color-brand-50: #eaf3f9;
+  --color-brand-100: #dbeaf5;
+  --color-brand-200: #b9daf3;
+  --color-brand-300: #8bc6f2;
+  --color-brand-400: #55abec;
+  --color-brand-500: #1c8fe6;
+  --color-brand-600: #146fb3;
+  --color-brand-700: #10588e;
+  --color-brand-800: #0d4671;
+  --color-brand-900: #0a3759;
+  --color-brand-950: #07253c;
+
+  /* ---- Ink: Elevate Navy ---------------------------------------------------
+     #27225D is the tagline and the lower head. It anchors 900, and the mid
+     steps are pulled down in chroma so body copy reads as slate, not lavender. */
+  --color-ink-50: #f7f7fa;
+  --color-ink-100: #edecf2;
+  --color-ink-200: #dcdbe6;
+  --color-ink-300: #c2c1d2;
+  --color-ink-400: #9b9ab1;
+  --color-ink-500: #6e6d87;
+  --color-ink-600: #555468;
+  --color-ink-700: #3f3e55;
+  --color-ink-800: #312e4e;
+  --color-ink-900: #27225d;
+  --color-ink-950: #1b1741;
+
+  /* ---- Halo: the light swoosh over the head ------------------------------- */
+  --color-halo-50: #f2f9fd;
+  --color-halo-100: #d6ebf8;
+  --color-halo-200: #c0e1f7;
+  --color-halo-300: #8ec5e8;
+  --color-halo-400: #5fadde;
+  --color-halo-500: #2e94d4;
+
+  /* ---- Idea bubbles: the accent families ---------------------------------
+     500 is the colour as it appears in the logo. 600/700 are darkened so the
+     same hue can carry text on white; 50 is the tint for chips and panels. */
+  --color-aqua-50: #e3f7f9;
+  --color-aqua-500: #13b5c5;
+  --color-aqua-600: #0e8e9b;
+  --color-aqua-700: #0b7079;
+
+  --color-gold-50: #fff6e0;
+  --color-gold-500: #fcb51b;
+  --color-gold-600: #c98a05;
+  --color-gold-700: #9a6a04;
+  /* Gold is the hardest accent to write with: 700 clears 4.5:1 on white
+     (4.73) but only reaches 4.40 on its own gold-50 tint, so a gold chip
+     failed. 800 clears both (5.65 on white, 5.25 on the tint). */
+  --color-gold-800: #8a5f04;
+
+  --color-leaf-50: #f0f6e2;
+  --color-leaf-500: #92ba3d;
+  --color-leaf-600: #6d8f28;
+  --color-leaf-700: #55701f;
+
+  --color-grape-50: #f4ecf7;
+  --color-grape-500: #7c3b92;
+  --color-grape-600: #6a3080;
+  --color-grape-700: #552666;
+
+  --color-crimson-50: #fdeaee;
+  --color-crimson-500: #d22b45;
+  --color-crimson-600: #b21f37;
+  --color-crimson-700: #8e1a2c;
+
+  --color-ember-50: #fceee9;
+  --color-ember-500: #cf472a;
+  --color-ember-600: #ae3a20;
+  --color-ember-700: #8c2e1a;
+
+  --color-steel-50: #eef1f7;
+  --color-steel-500: #6280ad;
+  --color-steel-600: #4d6892;
+  --color-steel-700: #3d5375;
+
+  /* ---- The four pillars ---------------------------------------------------
+     One bubble colour each, so a pillar keeps the same identity wherever it
+     appears — nav, card, icon, chart. */
+  --color-pillar-academia: #146fb3;
+  --color-pillar-academia-soft: #eaf3f9;
+  --color-pillar-academia-ink: #10588e;
+
+  --color-pillar-industry: #13b5c5;
+  --color-pillar-industry-soft: #e3f7f9;
+  --color-pillar-industry-ink: #0b7079;
+
+  --color-pillar-youth: #fcb51b;
+  --color-pillar-youth-soft: #fff6e0;
+  --color-pillar-youth-ink: #8a5f04;
+
+  --color-pillar-community: #92ba3d;
+  --color-pillar-community-soft: #f0f6e2;
+  --color-pillar-community-ink: #55701f;
+
+  /* ---- Surfaces ----------------------------------------------------------- */
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f7f7fa;
+  --color-surface-brand: #eaf3f9;
+  --color-surface-dark: #27225d;
+
+  /* ---- Status ------------------------------------------------------------- */
+  --color-success: #6d8f28;
+  --color-success-soft: #f0f6e2;
+  --color-warning: #c98a05;
+  --color-warning-soft: #fff6e0;
+  --color-danger: #b21f37;
+  --color-danger-soft: #fdeaee;
+  --color-info: #0e8e9b;
+  --color-info-soft: #e3f7f9;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-ink-700 font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand-100 text-ink-900;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Motion
+   ---------------------------------------------------------------------------
+   One system, one set of numbers. Entrance animation is driven by the <Reveal>
+   component (src/components/ui/Reveal.jsx), which adds `.is-visible` when an
+   element scrolls into view; everything else here is hover, route change, or
+   the two interactive panels (accordion, mobile menu).
+
+   Every rule below is switched off wholesale by the reduced-motion block at the
+   end of this file, so nothing moves for readers who have asked it not to.
+   --------------------------------------------------------------------------- */
+
+@theme {
+  /* Slow, confident deceleration — nothing springs or bounces. */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-gentle: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --motion-fast: 200ms;
+  --motion-medium: 400ms;
+  --motion-slow: 700ms;
+
+  --reveal-distance: 26px;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes panel-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0) scale(1.03);
+  }
+}
+
+@layer components {
+  /* --- Scroll reveal ------------------------------------------------------
+     Hidden until <Reveal> marks it visible. `--reveal-delay` is set inline by
+     the component to stagger items across a grid. */
+  .reveal {
+    opacity: 0;
+    transition:
+      opacity var(--motion-slow) var(--ease-soft) var(--reveal-delay, 0ms),
+      transform var(--motion-slow) var(--ease-soft) var(--reveal-delay, 0ms);
+  }
+
+  .reveal[data-variant="up"] {
+    transform: translateY(var(--reveal-distance));
+  }
+  .reveal[data-variant="scale"] {
+    transform: scale(0.965);
+  }
+  .reveal[data-variant="left"] {
+    transform: translateX(calc(var(--reveal-distance) * -1));
+  }
+  .reveal[data-variant="right"] {
+    transform: translateX(var(--reveal-distance));
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* --- Route change -------------------------------------------------------
+     Keyed on the pathname in Layout, so each new page fades up on arrival. */
+  .page-enter {
+    animation: page-enter var(--motion-medium) var(--ease-soft) both;
+  }
+
+  /* --- Mobile menu panel --------------------------------------------------- */
+  .panel-enter {
+    animation: panel-drop var(--motion-fast) var(--ease-gentle) both;
+  }
+
+  /* --- Decorative background blobs ---------------------------------------- */
+  .drift {
+    animation: drift 14s var(--ease-gentle) infinite;
+  }
+  .drift-slow {
+    animation: drift 22s var(--ease-gentle) infinite;
+  }
+
+  /* --- Nav link underline -------------------------------------------------- */
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: var(--color-brand-600);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--motion-fast) var(--ease-soft);
+  }
+  .nav-link:hover::after,
+  .nav-link[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+
+  /* --- Buttons ------------------------------------------------------------- */
+  .btn-motion {
+    transition:
+      background-color var(--motion-fast) var(--ease-gentle),
+      transform var(--motion-fast) var(--ease-soft),
+      box-shadow var(--motion-medium) var(--ease-soft);
+  }
+  .btn-motion:hover {
+    transform: translateY(-2px);
+  }
+  .btn-motion:active {
+    transform: translateY(0) scale(0.985);
+  }
+
+  /* An arrow inside a button or row slides forward on hover. */
+  .arrow-shift {
+    transition: transform var(--motion-fast) var(--ease-soft);
+  }
+  .group:hover .arrow-shift {
+    transform: translateX(4px);
+  }
+
+  /* --- Accordion panel -----------------------------------------------------
+     The 0fr -> 1fr grid trick animates to the content's natural height without
+     measuring it in JS. `visibility` keeps a closed panel out of the tab order
+     and away from screen readers, and is delayed on close so the collapse is
+     still visible while it runs. */
+  .accordion-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition:
+      grid-template-rows var(--motion-medium) var(--ease-soft),
+      visibility 0s linear var(--motion-medium);
+  }
+  .accordion-panel > * {
+    overflow: hidden;
+  }
+  .accordion-panel[data-open="true"] {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition:
+      grid-template-rows var(--motion-medium) var(--ease-soft),
+      visibility 0s;
+  }
+
+  /* --- Images -------------------------------------------------------------- */
+  .img-zoom {
+    overflow: hidden;
+  }
+  .img-zoom img {
+    transition: transform 900ms var(--ease-soft);
+  }
+  .img-zoom:hover img {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes chat-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes chat-bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes media-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fab-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes chat-dot {
+  0%,
+  70%,
+  100% {
+    transform: none;
+    opacity: 0.35;
+  }
+  35% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+@layer components {
+  /* --- Chat assistant -----------------------------------------------------
+     The panel grows out of the launcher it replaces, so the transform origin
+     is the corner both of them share. Bubbles arrive one at a time as the
+     scripted reply lands; the three dots stand in for it being composed. */
+  .chat-panel {
+    animation: chat-panel-in var(--motion-medium) var(--ease-soft) both;
+    transform-origin: bottom right;
+  }
+
+  .chat-bubble {
+    animation: chat-bubble-in var(--motion-fast) var(--ease-soft) both;
+  }
+
+  /* Cross-fade for a swapped image, e.g. stepping through the lightbox. */
+  .media-in {
+    animation: media-in var(--motion-fast) var(--ease-gentle) both;
+  }
+
+  /* A floating action button arriving — used by the back-to-top control, which
+     is mounted only once the reader has scrolled. */
+  .fab-in {
+    animation: fab-in var(--motion-fast) var(--ease-soft) both;
+  }
+
+  .chat-dot {
+    animation: chat-dot 1.25s var(--ease-gentle) infinite;
+  }
+  .chat-dot:nth-child(2) {
+    animation-delay: 0.16s;
+  }
+  .chat-dot:nth-child(3) {
+    animation-delay: 0.32s;
+  }
+
+  /* The four pillar colours as a segmented ring, echoing the logo's idea
+     bubbles. Used behind the launcher's collapse button. */
+  .pillar-ring {
+    background: conic-gradient(
+      from 135deg,
+      var(--color-pillar-academia) 0deg 90deg,
+      var(--color-pillar-industry) 90deg 180deg,
+      var(--color-pillar-youth) 180deg 270deg,
+      var(--color-pillar-community) 270deg 360deg
+    );
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Display typography and the richer scroll devices
+   ---------------------------------------------------------------------------
+   Anton needs optical correction at scale: its default leading is far too open
+   for stacked display lines, and it wants a touch of negative tracking. Every
+   big heading goes through `.display` so those corrections are applied once.
+
+   The devices below — marquee, Ken Burns, scroll cue, word-by-word reveal,
+   scroll-linked progress — are the vocabulary the competitor sites use. All of
+   them are plain CSS driven by one custom property or an `.is-visible` class,
+   so nothing here needs an animation library, and all of them are switched off
+   wholesale by the reduced-motion block at the end of this file.
+   --------------------------------------------------------------------------- */
+
+@keyframes marquee {
+  from {
+    transform: none;
+  }
+  to {
+    /* The track holds the content twice, so -50% is one seamless loop. */
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes ken-burns {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1.14);
+  }
+}
+
+@keyframes scroll-cue {
+  0%,
+  100% {
+    transform: none;
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(7px);
+    opacity: 1;
+  }
+}
+
+@layer components {
+  /* --- Display headings --------------------------------------------------- */
+  .display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+  }
+
+  /* Stacked display lines read as one block, so they lose the extra leading. */
+  .display-tight {
+    line-height: 0.86;
+  }
+
+  /* --- Word-by-word heading reveal ---------------------------------------
+     SplitReveal wraps each word in `.word` and sets `--word-index`; the
+     stagger is pure transition-delay, so there is no per-word animation to
+     schedule and no layout thrash. */
+  .split-reveal .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(0.42em);
+    transition:
+      opacity var(--motion-slow) var(--ease-soft),
+      transform var(--motion-slow) var(--ease-soft);
+    transition-delay: calc(var(--word-index, 0) * 55ms + var(--reveal-delay, 0ms));
+  }
+
+  .split-reveal.is-visible .word {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* --- Marquee -----------------------------------------------------------
+     Faded at both edges so the strip reads as continuous rather than as a
+     row that stops. Pauses on hover and on keyboard focus within, so a reader
+     can actually finish reading an item. */
+  .marquee {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee var(--marquee-duration, 34s) linear infinite;
+  }
+
+  .marquee:hover .marquee-track,
+  .marquee:focus-within .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .marquee-reverse .marquee-track {
+    animation-direction: reverse;
+  }
+
+  /* --- Hero imagery ------------------------------------------------------
+     A very slow push on a still photograph. Alternating rather than looping
+     means it never snaps back to the start. */
+  .ken-burns img {
+    animation: ken-burns 24s var(--ease-gentle) alternate infinite;
+    will-change: transform;
+  }
+
+  .scroll-cue {
+    animation: scroll-cue 2.1s var(--ease-gentle) infinite;
+  }
+
+  /* --- Parallax ----------------------------------------------------------
+     `--parallax` is written by useParallax as the element crosses the
+     viewport; the transform is the only thing that touches the compositor. */
+  .parallax {
+    transform: translate3d(0, var(--parallax, 0px), 0);
+    will-change: transform;
+  }
+
+  /* --- Scroll-linked progress rail ---------------------------------------
+     Used by the LEARN -> IMPACT journey. `--progress` (0 to 1) is set by
+     useScrollProgress; the rail fills as the section passes through.
+
+     The axis switch lives HERE, not in a `lg:` utility. This is a component
+     class, and Tailwind variants only apply to utilities — `lg:rail-fill`
+     compiles to nothing at all, which silently leaves a horizontal desktop
+     rail scaling on its vertical axis. One class, both axes, no variant. */
+  .rail-fill {
+    transform: scaleY(var(--progress, 0));
+    transform-origin: center top;
+  }
+
+  @media (width >= 64rem) {
+    .rail-fill {
+      transform: scaleX(var(--progress, 0));
+      transform-origin: left center;
+    }
+  }
+
+  /* --- Full-bleed section scrim ------------------------------------------
+     Two stops rather than one: a strong floor so text never sits on a bright
+     patch of photograph, plus a brand-tinted wash so the imagery joins the
+     palette instead of reading as stock. */
+  .scrim {
+    background:
+      linear-gradient(to top, var(--color-ink-950) 2%, color-mix(in oklab, var(--color-ink-950) 72%, transparent) 38%, transparent 82%),
+      linear-gradient(to right, color-mix(in oklab, var(--color-ink-900) 78%, transparent), color-mix(in oklab, var(--color-brand-900) 28%, transparent));
+  }
+
+  /* --- Card hover, richer than the sitewide lift -------------------------- */
+  .tile {
+    transition:
+      transform var(--motion-medium) var(--ease-soft),
+      box-shadow var(--motion-medium) var(--ease-soft),
+      border-color var(--motion-medium) var(--ease-soft);
+  }
+  .tile:hover {
+    transform: translateY(-8px);
+  }
+
+  /* The image inside a tile pushes in slightly further than the tile rises. */
+  .tile img {
+    transition: transform 1.1s var(--ease-soft);
+  }
+  .tile:hover img {
+    transform: scale(1.07);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Reduced motion: honour the reader's system setting. Revealed content is shown
+   outright rather than animated in, and every transition and looping animation
+   is cut. Nothing becomes unreachable when motion is off.
+   --------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal[data-variant="up"],
+  .reveal[data-variant="scale"],
+  .reveal[data-variant="left"],
+  .reveal[data-variant="right"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .accordion-panel {
+    transition: none;
+  }
+
+  .chat-panel,
+  .chat-bubble,
+  .fab-in,
+  .media-in {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .chat-dot {
+    animation: none;
+    opacity: 0.6;
+  }
+
+  /* Display devices: show the end state, move nothing. The marquee keeps its
+     content in place rather than scrolling, so nothing is lost. */
+  .split-reveal .word {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .marquee-track,
+  .ken-burns img,
+  .scroll-cue {
+    animation: none;
+  }
+
+  .parallax {
+    transform: none;
+  }
+
+  .rail-fill {
+    transform: none;
+  }
+
+  .tile:hover {
+    transform: none;
+  }
+  .tile:hover img {
+    transform: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
