@@ -1,5 +1,6 @@
 import Container from "../ui/Container";
 import Parallax from "../ui/Parallax";
+import Picture from "../ui/Picture";
 import Reveal from "../ui/Reveal";
 import SplitReveal from "../ui/SplitReveal";
 import { whatWeDo } from "../../data/content";
@@ -54,7 +55,7 @@ export default function WhatWeDo() {
               id="what-we-do-heading"
               lines={whatWeDo.lede.replace(/\.$/, "").split(". ")}
               delay={80}
-              className="display display-tight mt-5 text-4xl text-ink-900 sm:text-5xl lg:text-6xl"
+              className="display display-section display-tight mt-5 text-ink-900"
             />
           </div>
 
@@ -101,12 +102,10 @@ export default function WhatWeDo() {
                       variant={imageFirst ? "left" : "right"}
                       className="tile relative overflow-hidden rounded-[1.75rem] shadow-2xl ring-1 ring-ink-900/5"
                     >
-                      <img
+                      <Picture
                         src={pillar.image}
                         alt={pillar.alt}
-                        width="1000"
-                        height="750"
-                        loading="lazy"
+                        sizes="(min-width: 1024px) 640px, 100vw"
                         className="aspect-[5/4] w-full object-cover"
                       />
                       {/* The pillar number, burned into the corner of its own

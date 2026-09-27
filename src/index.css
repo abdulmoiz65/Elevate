@@ -254,6 +254,21 @@
     transform: none;
   }
 
+  /* On a phone the left/right variants slide vertically instead.
+     Those two variants are used on full-width blocks — a section image, a
+     column of copy — and below `sm` a full-width block has no slack either
+     side, so translating it 26px sideways sticks it past the viewport and the
+     page gains a horizontal scrollbar for as long as the element is waiting to
+     be revealed. It looks like a layout bug and it lets the reader swipe the
+     whole page off-centre. The motion still happens, just on the axis that has
+     somewhere to go. */
+  @media (width < 40rem) {
+    .reveal[data-variant="left"],
+    .reveal[data-variant="right"] {
+      transform: translateY(var(--reveal-distance));
+    }
+  }
+
   /* --- Route change -------------------------------------------------------
      Keyed on the pathname in Layout, so each new page fades up on arrival. */
   .page-enter {
@@ -408,6 +423,12 @@
   }
 }
 
+@keyframes orbit-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 @layer components {
   /* --- Chat assistant -----------------------------------------------------
      The panel grows out of the launcher it replaces, so the transform origin
@@ -453,6 +474,14 @@
       var(--color-pillar-youth) 180deg 270deg,
       var(--color-pillar-community) 270deg 360deg
     );
+  }
+
+  /* The same ring, turning. Slow enough that it reads as a live object rather
+     than as a loading spinner — a full turn takes the better part of a minute.
+     Used behind the founder monogram, where the four pillar colours standing
+     in for a photograph is the whole point of the device. */
+  .orbit-ring {
+    animation: orbit-spin 48s linear infinite;
   }
 }
 
@@ -511,9 +540,49 @@
     text-transform: uppercase;
   }
 
-  /* Stacked display lines read as one block, so they lose the extra leading. */
+  /* Stacked display lines read as one block, so they lose the extra leading.
+     0.86 is set for lines the designer chose; on a phone the same heading
+     picks up wrapped lines it was never meant to have, and at that leading
+     they collide into a solid wall of caps. Loosened just enough below `sm`
+     that a wrapped line still reads as part of the same block. */
   .display-tight {
     line-height: 0.86;
+  }
+
+  @media (width < 40rem) {
+    .display-tight {
+      line-height: 0.95;
+    }
+  }
+
+  /* --- Fluid display sizes -----------------------------------------------
+     Anton is condensed, but a single word still runs up to 7.5x its font size
+     ("ACADEMIA-INDUSTRY"), and SplitReveal makes every word an inline-block
+     that cannot break. So a fixed mobile size chosen to look right on a 414px
+     phone collapses to one word per line on a 360px one — which is exactly
+     what the belief section was doing: eight stacked single words where three
+     phrases were intended.
+
+     Stepping at breakpoints cannot fix that, because the problem is the range
+     *inside* a step. These scale continuously with the viewport instead. The
+     maximum of each is the size the old `lg:` class produced, so nothing
+     changes on a desktop; the minimum is set so the longest phrase on the site
+     still fits two words to a line at 320px.
+
+     Use one of these INSTEAD of a Tailwind `text-*` class, never alongside
+     one: Tailwind's utilities layer wins over this components layer, so a
+     leftover `sm:text-6xl` would silently override the clamp. */
+  .display-hero {
+    font-size: clamp(2rem, 9vw, 4.5rem);
+  }
+
+  .display-section {
+    font-size: clamp(1.75rem, 7vw, 3.75rem);
+  }
+
+  /* The founder's name, which is the one heading allowed to be louder. */
+  .display-name {
+    font-size: clamp(2.5rem, 11vw, 5.5rem);
   }
 
   /* --- Word-by-word heading reveal ---------------------------------------
@@ -674,7 +743,8 @@
 
   .marquee-track,
   .ken-burns img,
-  .scroll-cue {
+  .scroll-cue,
+  .orbit-ring {
     animation: none;
   }
 

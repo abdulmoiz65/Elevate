@@ -203,6 +203,7 @@ export default function ChatWidget() {
                 src={meta.logo}
                 alt=""
                 loading="lazy"
+                decoding="async"
                 className="h-10 w-10 shrink-0 rounded-lg bg-white/95 object-contain p-1"
               />
               <div className="flex shrink-0 gap-1">

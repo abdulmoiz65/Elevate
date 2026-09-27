@@ -1,6 +1,7 @@
 import Button from "../ui/Button";
 import Container from "../ui/Container";
 import Icon from "../ui/Icon";
+import Picture from "../ui/Picture";
 import Reveal from "../ui/Reveal";
 import SplitReveal from "../ui/SplitReveal";
 import { hero, site } from "../../data/content";
@@ -33,12 +34,11 @@ export default function HomeHero() {
     <section className="relative isolate flex min-h-[38rem] items-end overflow-hidden bg-ink-950 lg:min-h-[44rem]">
       {/* Backdrop */}
       <div className="ken-burns absolute inset-0 -z-10">
-        <img
+        <Picture
           src={hero.image}
           alt={hero.alt}
-          width="1920"
-          height="900"
-          fetchPriority="high"
+          sizes="100vw"
+          priority
           className="h-full w-full object-cover"
         />
       </div>
@@ -57,7 +57,7 @@ export default function HomeHero() {
           as="h1"
           lines={promiseLines}
           delay={120}
-          className="display display-tight mt-6 max-w-4xl text-[2.75rem] text-white sm:text-6xl lg:text-7xl"
+          className="display display-hero display-tight mt-6 max-w-4xl text-white"
         />
 
         <Reveal delay={420} className="mt-8 flex gap-2.5">

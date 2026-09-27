@@ -48,7 +48,7 @@ export default function ImpactAreas() {
               id="impact-heading"
               lines={impact.lede.replace(/\.$/, "")}
               delay={80}
-              className="display display-tight mt-5 text-4xl text-ink-900 sm:text-5xl lg:text-6xl"
+              className="display display-section display-tight mt-5 text-ink-900"
             />
           </div>
 

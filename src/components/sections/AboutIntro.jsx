@@ -1,4 +1,5 @@
 import Container from "../ui/Container";
+import Picture from "../ui/Picture";
 import Reveal from "../ui/Reveal";
 import SectionHeading from "../ui/SectionHeading";
 import { about } from "../../data/content";
@@ -45,12 +46,10 @@ export default function AboutIntro({ level = "h2", withImage = true, showHeading
           {withImage && (
             <Reveal variant="right" delay={140}>
               <div className="img-zoom rounded-3xl shadow-lg ring-1 ring-ink-900/5">
-                <img
+                <Picture
                   src={about.image}
                   alt={about.alt}
-                  width="2048"
-                  height="1365"
-                  loading="lazy"
+                  sizes="(min-width: 1024px) 512px, 100vw"
                   className="aspect-[7/5] w-full rounded-3xl object-cover"
                 />
               </div>

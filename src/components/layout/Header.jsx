@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Container from "../ui/Container";
 import Icon from "../ui/Icon";
+import Picture from "../ui/Picture";
 import { contactLink, navLinks } from "../../data/navigation";
 import { site } from "../../data/content";
 
@@ -57,11 +58,11 @@ export default function Header() {
           className="flex items-center gap-3"
           aria-label={`${site.name} — home`}
         >
-          <img
+          <Picture
             src="/assets/images/brand/elevate-logo.png"
             alt={`${site.name} logo: a human profile filled with a network of connected nodes`}
-            width="340"
-            height="256"
+            sizes="75px"
+            priority
             className={`w-auto transition-[height] duration-300 ${
               scrolled ? "h-10 sm:h-11" : "h-12 sm:h-14"
             }`}

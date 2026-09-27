@@ -5,6 +5,7 @@ import BridgePage from "./pages/BridgePage";
 import ContactPage from "./pages/ContactPage";
 import EventsPage from "./pages/EventsPage";
 import FaqPage from "./pages/FaqPage";
+import FounderPage from "./pages/FounderPage";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProgramsPage from "./pages/ProgramsPage";
@@ -16,6 +17,7 @@ export default function App() {
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
+        <Route path="meet-founder" element={<FounderPage />} />
         <Route path="bridge" element={<BridgePage />} />
         <Route path="programs" element={<ProgramsPage />} />
         <Route path="events" element={<EventsPage />} />

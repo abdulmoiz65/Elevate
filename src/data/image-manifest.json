@@ -1,0 +1,629 @@
+{
+  "/assets/images/brand/elevate-logo.png": {
+    "base": "/assets/derived/brand/elevate-logo",
+    "widths": [
+      340
+    ],
+    "width": 340,
+    "height": 256
+  },
+  "/assets/images/brand/elevate-mark.png": {
+    "base": "/assets/derived/brand/elevate-mark",
+    "widths": [
+      90
+    ],
+    "width": 90,
+    "height": 256
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-01.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-01",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1367
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-02.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-02",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1367
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-03.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-03",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1367
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-04.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-04",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1367
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-05.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-05",
+    "widths": [
+      320,
+      640,
+      1280,
+      1848
+    ],
+    "width": 1848,
+    "height": 1224
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-06.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-06",
+    "widths": [
+      320,
+      640,
+      1280,
+      1848
+    ],
+    "width": 1848,
+    "height": 1224
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-07.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-07",
+    "widths": [
+      320,
+      640,
+      1280,
+      1848
+    ],
+    "width": 1848,
+    "height": 1224
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-08.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-08",
+    "widths": [
+      320,
+      640,
+      1280,
+      1848
+    ],
+    "width": 1848,
+    "height": 1224
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-09.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-09",
+    "widths": [
+      320,
+      640,
+      1280,
+      1848
+    ],
+    "width": 1848,
+    "height": 1224
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-10.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-10",
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 854
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-11.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-11",
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 854
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-12.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-12",
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 854
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-13.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-13",
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 847
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-14.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-14",
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 847
+  },
+  "/assets/images/events/career-counseling-monotechnic-malir/career-counseling-monotechnic-malir-01.jpg": {
+    "base": "/assets/derived/events/career-counseling-monotechnic-malir/career-counseling-monotechnic-malir-01",
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 853
+  },
+  "/assets/images/events/career-counseling-monotechnic-malir/career-counseling-monotechnic-malir-02.jpg": {
+    "base": "/assets/derived/events/career-counseling-monotechnic-malir/career-counseling-monotechnic-malir-02",
+    "widths": [
+      320,
+      640,
+      1134
+    ],
+    "width": 1134,
+    "height": 734
+  },
+  "/assets/images/events/career-counseling-monotechnic-malir/career-counseling-monotechnic-malir-03.jpg": {
+    "base": "/assets/derived/events/career-counseling-monotechnic-malir/career-counseling-monotechnic-malir-03",
+    "widths": [
+      320,
+      640,
+      904
+    ],
+    "width": 904,
+    "height": 1280
+  },
+  "/assets/images/events/career-counseling-monotechnic-malir/career-counseling-monotechnic-malir-04.jpg": {
+    "base": "/assets/derived/events/career-counseling-monotechnic-malir/career-counseling-monotechnic-malir-04",
+    "widths": [
+      320,
+      708
+    ],
+    "width": 708,
+    "height": 1062
+  },
+  "/assets/images/events/cv-making-arena-multimedia/cv-making-arena-multimedia-01.jpg": {
+    "base": "/assets/derived/events/cv-making-arena-multimedia/cv-making-arena-multimedia-01",
+    "widths": [
+      320,
+      640,
+      960
+    ],
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/events/future-of-finance/future-of-finance-01.jpg": {
+    "base": "/assets/derived/events/future-of-finance/future-of-finance-01",
+    "widths": [
+      320,
+      526
+    ],
+    "width": 526,
+    "height": 789
+  },
+  "/assets/images/events/learning-expo/learning-expo-01.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-01",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-02.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-02",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-03.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-03",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-04.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-04",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-05.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-05",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-06.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-06",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-07.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-07",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-08.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-08",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-09.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-09",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-10.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-10",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-11.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-11",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-12.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-12",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-13.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-13",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-14.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-14",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-15.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-15",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/learning-expo/learning-expo-16.jpg": {
+    "base": "/assets/derived/events/learning-expo/learning-expo-16",
+    "widths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "width": 2048,
+    "height": 1365
+  },
+  "/assets/images/events/motivational-session-bbsul/motivational-session-bbsul-01.jpg": {
+    "base": "/assets/derived/events/motivational-session-bbsul/motivational-session-bbsul-01",
+    "widths": [
+      320,
+      640,
+      960
+    ],
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/events/motivational-session-bbsul/motivational-session-bbsul-02.jpg": {
+    "base": "/assets/derived/events/motivational-session-bbsul/motivational-session-bbsul-02",
+    "widths": [
+      320,
+      640,
+      960
+    ],
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/events/motivational-session-bbsul/motivational-session-bbsul-03.jpg": {
+    "base": "/assets/derived/events/motivational-session-bbsul/motivational-session-bbsul-03",
+    "widths": [
+      320,
+      640,
+      720
+    ],
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/events/motivational-session-bbsul/motivational-session-bbsul-04.jpg": {
+    "base": "/assets/derived/events/motivational-session-bbsul/motivational-session-bbsul-04",
+    "widths": [
+      320,
+      640,
+      720
+    ],
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-01.jpg": {
+    "base": "/assets/derived/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-01",
+    "widths": [
+      320,
+      640,
+      1368
+    ],
+    "width": 1368,
+    "height": 912
+  },
+  "/assets/images/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-02.jpg": {
+    "base": "/assets/derived/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-02",
+    "widths": [
+      320,
+      640,
+      1368
+    ],
+    "width": 1368,
+    "height": 912
+  },
+  "/assets/images/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-03.jpg": {
+    "base": "/assets/derived/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-03",
+    "widths": [
+      320,
+      640,
+      1368
+    ],
+    "width": 1368,
+    "height": 912
+  },
+  "/assets/images/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-04.jpg": {
+    "base": "/assets/derived/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-04",
+    "widths": [
+      320,
+      640,
+      1368
+    ],
+    "width": 1368,
+    "height": 912
+  },
+  "/assets/images/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-05.jpg": {
+    "base": "/assets/derived/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-05",
+    "widths": [
+      320,
+      640,
+      1368
+    ],
+    "width": 1368,
+    "height": 912
+  },
+  "/assets/images/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-06.jpg": {
+    "base": "/assets/derived/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-06",
+    "widths": [
+      320,
+      640,
+      1368
+    ],
+    "width": 1368,
+    "height": 912
+  },
+  "/assets/images/events/synergy-summit-2025/synergy-summit-2025-01.jpg": {
+    "base": "/assets/derived/events/synergy-summit-2025/synergy-summit-2025-01",
+    "widths": [
+      320,
+      640,
+      1280,
+      1599
+    ],
+    "width": 1599,
+    "height": 1066
+  },
+  "/assets/images/events/synergy-summit-2025/synergy-summit-2025-02.jpg": {
+    "base": "/assets/derived/events/synergy-summit-2025/synergy-summit-2025-02",
+    "widths": [
+      320,
+      640,
+      1280,
+      1599
+    ],
+    "width": 1599,
+    "height": 1066
+  },
+  "/assets/images/events/synergy-summit-2025/synergy-summit-2025-03.jpg": {
+    "base": "/assets/derived/events/synergy-summit-2025/synergy-summit-2025-03",
+    "widths": [
+      320,
+      640,
+      1280,
+      1599
+    ],
+    "width": 1599,
+    "height": 1066
+  },
+  "/assets/images/events/synergy-summit-2025/synergy-summit-2025-04.jpg": {
+    "base": "/assets/derived/events/synergy-summit-2025/synergy-summit-2025-04",
+    "widths": [
+      320,
+      640,
+      1280,
+      1599
+    ],
+    "width": 1599,
+    "height": 1066
+  },
+  "/assets/images/events/synergy-summit-2025/synergy-summit-2025-05.jpg": {
+    "base": "/assets/derived/events/synergy-summit-2025/synergy-summit-2025-05",
+    "widths": [
+      320,
+      640,
+      1280,
+      1599
+    ],
+    "width": 1599,
+    "height": 1066
+  },
+  "/assets/images/events/synergy-summit-2025/synergy-summit-2025-06.jpg": {
+    "base": "/assets/derived/events/synergy-summit-2025/synergy-summit-2025-06",
+    "widths": [
+      320,
+      640,
+      1280,
+      1599
+    ],
+    "width": 1599,
+    "height": 1066
+  },
+  "/assets/images/events/workshop-financial-market/workshop-financial-market-01.jpg": {
+    "base": "/assets/derived/events/workshop-financial-market/workshop-financial-market-01",
+    "widths": [
+      320,
+      509
+    ],
+    "width": 509,
+    "height": 720
+  },
+  "/assets/images/events/world-entrepreneurship-day-2025/world-entrepreneurship-day-2025-01.jpg": {
+    "base": "/assets/derived/events/world-entrepreneurship-day-2025/world-entrepreneurship-day-2025-01",
+    "widths": [
+      320,
+      640,
+      1280,
+      1600
+    ],
+    "width": 1600,
+    "height": 1066
+  },
+  "/assets/images/events/world-entrepreneurship-day-2025/world-entrepreneurship-day-2025-02.jpg": {
+    "base": "/assets/derived/events/world-entrepreneurship-day-2025/world-entrepreneurship-day-2025-02",
+    "widths": [
+      320,
+      640,
+      1280,
+      1600
+    ],
+    "width": 1600,
+    "height": 1066
+  },
+  "/assets/images/events/world-entrepreneurship-day-2025/world-entrepreneurship-day-2025-03.jpg": {
+    "base": "/assets/derived/events/world-entrepreneurship-day-2025/world-entrepreneurship-day-2025-03",
+    "widths": [
+      320,
+      640,
+      1280,
+      1600
+    ],
+    "width": 1600,
+    "height": 1066
+  },
+  "/assets/images/events/world-entrepreneurship-day-2025/world-entrepreneurship-day-2025-04.jpg": {
+    "base": "/assets/derived/events/world-entrepreneurship-day-2025/world-entrepreneurship-day-2025-04",
+    "widths": [
+      320,
+      640,
+      1280,
+      1600
+    ],
+    "width": 1600,
+    "height": 1066
+  },
+  "/assets/images/events/world-entrepreneurship-day-2025/world-entrepreneurship-day-2025-05.jpg": {
+    "base": "/assets/derived/events/world-entrepreneurship-day-2025/world-entrepreneurship-day-2025-05",
+    "widths": [
+      320,
+      590
+    ],
+    "width": 590,
+    "height": 393
+  }
+}

@@ -1,5 +1,6 @@
 import Container from "../ui/Container";
 import Icon from "../ui/Icon";
+import Picture from "../ui/Picture";
 import Reveal from "../ui/Reveal";
 import ContactForm from "./ContactForm";
 import { contact } from "../../data/content";
@@ -13,12 +14,10 @@ export default function ContactSection({ withHeading = true }) {
     >
       {/* Warm, low-contrast backdrop; purely decorative. */}
       <div aria-hidden="true" className="absolute inset-x-0 top-0 h-72 overflow-hidden">
-        <img
+        <Picture
           src={contact.image}
           alt=""
-          width="1800"
-          height="680"
-          loading="lazy"
+          sizes="100vw"
           className="h-full w-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white" />

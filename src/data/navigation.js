@@ -2,6 +2,7 @@
 export const navLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
+  { label: "Meet the Founder", to: "/meet-founder" },
   { label: "Academia\u2013Industry Bridge", to: "/bridge" },
   { label: "Program Areas", to: "/programs" },
   { label: "Events", to: "/events" },

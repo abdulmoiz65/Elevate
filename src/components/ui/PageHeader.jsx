@@ -52,7 +52,7 @@ export default function PageHeader({ eyebrow, title, lede, children }) {
           as="h1"
           lines={title}
           delay={80}
-          className={`display display-tight max-w-4xl text-[2.5rem] sm:text-6xl lg:text-7xl ${eyebrow ? "mt-5" : ""}`}
+          className={`display display-hero display-tight max-w-4xl ${eyebrow ? "mt-5" : ""}`}
         />
 
         <Reveal delay={320} className="mt-7 flex gap-2">

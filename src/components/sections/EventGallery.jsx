@@ -3,6 +3,7 @@ import Container from "../ui/Container";
 import Icon from "../ui/Icon";
 import Lightbox from "../ui/Lightbox";
 import Parallax from "../ui/Parallax";
+import Picture from "../ui/Picture";
 import Reveal from "../ui/Reveal";
 import { eventImageCount, eventItems, eventPartners } from "../../data/events";
 import { events } from "../../data/content";
@@ -110,22 +111,18 @@ export default function EventGallery() {
                             // Contained on a tint: a cropped poster is a poster
                             // with its own details cut off.
                             <span className={`flex items-center justify-center p-6 ${accent.soft}`}>
-                              <img
+                              <Picture
                                 src={cover.src}
                                 alt={cover.alt}
-                                width={cover.w}
-                                height={cover.h}
-                                loading="lazy"
+                                sizes="(min-width: 640px) 336px, 70vw"
                                 className="max-h-[30rem] w-auto rounded-lg object-contain shadow-lg"
                               />
                             </span>
                           ) : (
-                            <img
+                            <Picture
                               src={cover.src}
                               alt={cover.alt}
-                              width={cover.w}
-                              height={cover.h}
-                              loading="lazy"
+                              sizes="(min-width: 1024px) 640px, 100vw"
                               className="aspect-[5/4] w-full object-cover sm:aspect-[16/10]"
                             />
                           )}
@@ -152,12 +149,10 @@ export default function EventGallery() {
                               onClick={(event) => open(eventIndex, offset + 1, event.currentTarget)}
                               className="tile block w-full overflow-hidden rounded-xl shadow-sm ring-1 ring-ink-200 hover:ring-ink-300"
                             >
-                              <img
+                              <Picture
                                 src={image.src}
                                 alt={image.alt}
-                                width={image.w}
-                                height={image.h}
-                                loading="lazy"
+                                sizes="(min-width: 1024px) 100px, (min-width: 640px) 15vw, 30vw"
                                 className="aspect-square w-full object-cover"
                               />
                             </button>

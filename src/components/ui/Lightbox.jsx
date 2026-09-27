@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import Icon from "./Icon";
+import Picture from "./Picture";
 
 /**
  * Full-screen image viewer for an event gallery.
@@ -137,12 +138,12 @@ export default function Lightbox({ images, index, label, onNavigate, onClose }) 
         onClick={onClose}
         className="flex min-h-0 flex-1 cursor-zoom-out items-center justify-center px-4 sm:px-6"
       >
-        <img
+        <Picture
           key={image.src}
           src={image.src}
           alt={image.alt}
-          width={image.w}
-          height={image.h}
+          sizes="100vw"
+          priority
           onClick={(event) => event.stopPropagation()}
           className="media-in max-h-full w-auto max-w-full cursor-default rounded-lg object-contain shadow-2xl"
         />

@@ -4,9 +4,15 @@
 // Every string below is taken verbatim from `ELEVATE content.docx` and was
 // generated from that document rather than retyped, so the site cannot drift
 // from the source copy. Asset paths and image alt text are the only additions.
+//
+// Every photograph on the site is the client's own, from `assets/images/events/`.
+// The six Unsplash stock photographs this file used to point at were replaced:
+// they were shot in Western and African settings and read as imported next to
+// an organization whose work is in Karachi. Real event photography of the
+// actual students and professionals is both more honest and more persuasive,
+// and it costs nothing in licensing.
 // ---------------------------------------------------------------------------
 
-const PHOTOS = "/assets/images/photos";
 const ICONS = "/assets/images/icons";
 const EVENTS = "/assets/images/events";
 
@@ -60,8 +66,8 @@ export const whatWeDo = {
       name: "Academia",
       heading: "01 — Academia",
       body: "We engage with universities, faculty, researchers and students to promote practical learning, innovation, research collaboration and industry exposure.",
-      image: `${PHOTOS}/pillar-academia-students-in-lecture-hall.jpg`,
-      alt: "Students of several ethnicities seated at desks in a tiered university lecture hall, taking notes and listening attentively.",
+      image: `${EVENTS}/learning-expo/learning-expo-10.jpg`,
+      alt: "Students seated at rows of desks in a university classroom during the Elevate Learning Expo, facing a speaker at the whiteboard beside a projection screen.",
     },
     {
       key: "industry",
@@ -69,8 +75,8 @@ export const whatWeDo = {
       name: "Industry",
       heading: "02 — Industry",
       body: "We connect businesses, professionals, entrepreneurs and organizations with emerging talent and academic expertise.",
-      image: `${PHOTOS}/pillar-industry-team-meeting-in-office.jpg`,
-      alt: "A diverse team gathered around a white table in a bright modern office, mid-discussion with laptops and notes in front of them.",
+      image: `${EVENTS}/synergy-summit-2025/synergy-summit-2025-05.jpg`,
+      alt: "A row of business leaders and professionals seated together at Synergy Summit 2025: Academia Meets Industry, facing the room.",
     },
     {
       key: "youth",
@@ -78,8 +84,8 @@ export const whatWeDo = {
       name: "Youth & Talent",
       heading: "03 — Youth & Talent",
       body: "We help young people develop the skills, confidence, networks and experiences needed to succeed in education, employment, entrepreneurship and leadership.",
-      image: `${PHOTOS}/pillar-youth-young-woman-presenting.jpg`,
-      alt: "A young woman speaking and gesturing as she presents to a room, standing in front of a projection screen in warm natural light.",
+      image: `${EVENTS}/learning-expo/learning-expo-13.jpg`,
+      alt: "A young woman in a yellow kurta speaking to a room at the Elevate Learning Expo, standing in front of a whiteboard covered in session notes.",
     },
     {
       key: "community",
@@ -87,8 +93,8 @@ export const whatWeDo = {
       name: "Community",
       heading: "04 — Community",
       body: "We support initiatives that translate knowledge, skills and partnerships into meaningful community impact.",
-      image: `${PHOTOS}/pillar-community-volunteer-with-children.jpg`,
-      alt: "A volunteer handing out orange caps to a group of children and teenagers at an outdoor community event.",
+      image: `${EVENTS}/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-12.jpg`,
+      alt: "Mentors seated at the front of a college hall during an Elevate career counselling session, with rows of students in uniform behind them.",
     },
   ],
 };
@@ -105,8 +111,8 @@ export const whyElevate = {
     "Any student is uncertain about their future and needs clear, personalized guidance to make informed career decisions.",
   ],
   closing: "Elevate connects these possibilities and many more",
-  image: `${PHOTOS}/why-elevate-climbing-steps-into-sunlight.jpg`,
-  alt: "Four people seen from behind climbing a wide flight of brick steps toward bright sunlight at the top.",
+  image: `${EVENTS}/motivational-session-bbsul/motivational-session-bbsul-02.jpg`,
+  alt: "A hall of students seated in rows watching a speaker on stage during the Elevate motivational session at BBSUL.",
 };
 
 export const impact = {
@@ -245,8 +251,117 @@ export const contact = {
   body: "Whether you are a student, university, researcher, professional, company, entrepreneur, organization or community leader, there is a place for you in the Elevate ecosystem.",
   calls: ["Partner with us.", "Volunteer with us.", "Mentor with us.", "Collaborate with us.", "Create impact with us."],
   closing: "Together, we Elevate.",
+  email: "connection.elevate@gmail.com",
   // Dropdown options, drawn from the audiences the CONTACT copy names above.
   roles: ["Student", "University", "Researcher", "Professional", "Company", "Entrepreneur", "Organization", "Community leader"],
-  image: `${PHOTOS}/contact-warm-leaf-shadow-on-wall.jpg`,
-  alt: "Soft shadows of leaves falling across a warm, plain sand-coloured wall.",
+  image: `${EVENTS}/world-entrepreneurship-day-2025/world-entrepreneurship-day-2025-02.jpg`,
+  alt: "A speaker at a lectern addressing the World Entrepreneurship Day Convention, with the panel seated at a long table beside him.",
+};
+
+// ---------------------------------------------------------------------------
+// Off-site presence.
+//
+// Addresses supplied by the client. `icon` names a glyph in Icon.jsx; the
+// colour each one takes on hover is decided in SocialLinks.jsx, not here, so
+// this stays a list of addresses rather than a list of styles.
+//
+// `handle` is the human-readable form shown beside the icon in wide layouts.
+// LinkedIn's URL is a numeric company id rather than a vanity slug, so its
+// handle is the organisation name.
+// ---------------------------------------------------------------------------
+export const social = [
+  {
+    name: "Facebook",
+    handle: "elevate.bmbb",
+    href: "https://www.facebook.com/pg/elevate.bmbb/",
+    icon: "facebook",
+  },
+  {
+    name: "Instagram",
+    handle: "@elevate.bmbb",
+    href: "https://www.instagram.com/elevate.bmbb/",
+    icon: "instagram",
+  },
+  {
+    name: "LinkedIn",
+    handle: "Elevate",
+    href: "https://www.linkedin.com/company/14711535/",
+    icon: "linkedin",
+  },
+];
+
+// ---------------------------------------------------------------------------
+// MEET THE FOUNDER
+//
+// Written from the three-paragraph biography the client supplied for this page.
+// The paragraphs are not printed whole: each one is split into the sentence
+// that carries it and the list it contains, so the page can *enumerate* the
+// expertise, the work and the opportunities instead of running them together
+// in prose the reader has to unpick. The words are the client's throughout —
+// nothing here is invented, and the sentences are only reflowed as lead-ins.
+//
+//   Paragraph 1 -> `lede` + `expertise`
+//   Paragraph 2 -> `work.lede` + `work.items` + `work.audiences`
+//   Paragraph 3 -> `vision.statement` + `vision.opportunities` + `vision.audience`
+//
+// `portrait` is null because no photograph of the founder has been supplied.
+// FounderHero falls back to a monogram medallion rather than to an empty
+// frame; set this to an image path and the photograph takes its place with no
+// other change.
+// ---------------------------------------------------------------------------
+export const founder = {
+  title: "MEET THE FOUNDER",
+  name: "Romesa Aqeel",
+  nameLines: ["Romesa", "Aqeel"],
+  initials: "RA",
+  role: "Founder, Elevate",
+  lede: "A higher education and professional development specialist.",
+  portrait: null,
+  portraitAlt: null,
+
+  expertiseLabel: "Expertise",
+  expertise: [
+    "Academia–industry engagement",
+    "Research and innovation",
+    "Corporate partnerships",
+    "Event management",
+    "Stakeholder engagement",
+  ],
+
+  work: {
+    title: "EXPERIENCE",
+    lede: "Extensive experience managing academic and industry-facing initiatives.",
+    intro: "She has worked on:",
+    items: [
+      "Strategic partnerships",
+      "Professional events",
+      "Innovation activities",
+      "Institutional collaborations",
+      "Career-oriented programs",
+    ],
+    audiencesLabel: "Bringing together",
+    audiences: ["Students", "Professionals", "Organizations", "Academic stakeholders"],
+    // A clean frame from the client's own Learning Expo set — a session in
+    // progress, which is what "managing academic initiatives" actually looks
+    // like. Not captioned as the founder: nobody has identified who is in it.
+    image: `${EVENTS}/learning-expo/learning-expo-03.jpg`,
+    alt: "A facilitator standing at the front of a full computer lab at the Elevate Learning Expo, speaking to seated students with a slide about CV language projected behind her.",
+  },
+
+  vision: {
+    title: "HER VISION",
+    statement: "Bridge the gap between academia and industry.",
+    intro: "By creating opportunities for",
+    opportunities: [
+      "Career counselling",
+      "Mentorship",
+      "Professional development",
+      "Leadership",
+      "Industry interaction",
+      "Meaningful networking",
+    ],
+    audience: "for students and young professionals.",
+    image: `${EVENTS}/synergy-summit-2025/synergy-summit-2025-04.jpg`,
+    alt: "Guests and organisers standing together on stage at Synergy Summit 2025: Academia Meets Industry, as a commemorative shield is presented.",
+  },
 };

@@ -18,7 +18,7 @@
 // or in another node's `follow` so it is reachable by tapping as well.
 // ---------------------------------------------------------------------------
 
-import { about, bridge, contact, events, faq, impact, mission, programs, site, vision, whatWeDo, whyElevate } from "./content";
+import { about, bridge, contact, events, faq, founder, impact, mission, programs, site, vision, whatWeDo, whyElevate } from "./content";
 
 /** "Industry & Corporate Engagement" -> "industry-and-corporate-engagement" */
 const slug = (name) =>
@@ -73,7 +73,7 @@ const programKeywords = {
   "Industry & Corporate Engagement": ["corporate engagement", "industry engagement", "industry session", "employer engagement", "corporate"],
   "Career Counselling & Guidance": ["counselling", "counseling", "career guidance", "career advice", "career path", "career planning", "which career", "guidance"],
   Mentorship: ["mentor", "mentorship", "mentoring", "find a mentor", "become a mentor"],
-  "Entrepreneurship & Innovation": ["entrepreneur", "entrepreneurship", "startup", "start up", "innovation", "business idea", "founder"],
+  "Entrepreneurship & Innovation": ["entrepreneur", "entrepreneurship", "startup", "start up", "innovation", "business idea"],
   "Research & Knowledge Exchange": ["research", "researcher", "knowledge exchange", "academic research", "research partner"],
   "Digital & Future Skills": ["digital skills", "future skills", "technology skills", "tech skills", "upskilling", "reskilling"],
   "Community Impact": ["community impact", "community initiative", "social project", "give back", "community need"],
@@ -96,7 +96,7 @@ const pathwayKeywords = {
   Researchers: ["researcher", "phd", "research fellow", "scientist"],
   Universities: ["university", "universities", "institution", "college", "campus"],
   Businesses: ["business", "company", "employer", "hiring", "recruit", "talent pipeline"],
-  Entrepreneurs: ["entrepreneur", "founder", "startup", "start up", "small business"],
+  Entrepreneurs: ["entrepreneur", "startup", "start up", "small business"],
   Communities: ["community", "ngo", "non profit", "charity", "community group"],
 };
 
@@ -179,8 +179,21 @@ export const chatbot = {
       question: "What is Elevate?",
       answer: [about.body[0], about.belief.highlight],
       link: { label: "Read the About page", to: "/about" },
-      follow: ["mission", "vision", "why-elevate", "what-we-do"],
+      follow: ["founder", "mission", "vision", "why-elevate", "what-we-do"],
       keywords: ["what is elevate", "who are you", "about elevate", "about your organization", "who is elevate", "organization", "organisation", "non profit", "nonprofit", "ngo", "charity"],
+    },
+    {
+      // "founder" on its own used to score against the entrepreneurship topics.
+      // Someone typing it almost always means the person, so the bare word was
+      // moved here and those nodes kept their longer, more specific phrases.
+      id: "founder",
+      label: "Who founded Elevate?",
+      question: "Who founded Elevate?",
+      answer: [`Elevate was founded by ${founder.name} — ${lower(founder.lede)}`, "Her expertise covers:"],
+      bullets: founder.expertise,
+      link: { label: "Meet the founder", to: "/meet-founder" },
+      follow: ["what-is-elevate", "vision", "get-involved"],
+      keywords: ["founder", "who founded", "who founded elevate", "who started elevate", "who runs elevate", "who leads elevate", "romesa", "romesa aqeel", "aqeel", "meet the founder", "ceo", "director"],
     },
     {
       id: "mission",

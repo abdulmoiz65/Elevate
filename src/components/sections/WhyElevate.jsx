@@ -1,4 +1,5 @@
 import Container from "../ui/Container";
+import Picture from "../ui/Picture";
 import Reveal from "../ui/Reveal";
 import SectionHeading from "../ui/SectionHeading";
 import { whyElevate } from "../../data/content";
@@ -40,12 +41,10 @@ export default function WhyElevate() {
 
         <Reveal variant="right" delay={160}>
           <div className="img-zoom rounded-3xl shadow-lg ring-1 ring-ink-900/5">
-            <img
+            <Picture
               src={whyElevate.image}
               alt={whyElevate.alt}
-              width="1600"
-              height="1000"
-              loading="lazy"
+              sizes="(min-width: 1024px) 512px, 100vw"
               className="aspect-[8/5] w-full rounded-3xl object-cover"
             />
           </div>

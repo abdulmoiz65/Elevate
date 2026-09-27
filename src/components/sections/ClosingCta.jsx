@@ -58,7 +58,7 @@ export default function ClosingCta() {
             id="closing-cta-heading"
             lines={contact.closing.replace(/\.$/, "")}
             delay={80}
-            className="display display-tight mt-5 text-4xl sm:text-5xl lg:text-6xl"
+            className="display display-section display-tight mt-5"
           />
 
           <Reveal delay={300} className="mt-7 flex gap-2">

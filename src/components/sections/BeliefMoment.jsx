@@ -57,13 +57,13 @@ export default function BeliefMoment() {
           id="belief-heading"
           lines={[premiseOne, premiseTwo]}
           delay={100}
-          className="display display-tight mt-7 text-[2.5rem] text-white sm:text-6xl lg:text-7xl"
+          className="display display-hero display-tight mt-7 text-white"
         />
         <SplitReveal
           as="p"
           lines={[conclusion]}
           delay={520}
-          className="display display-tight mt-1 text-[2.5rem] text-gold-500 sm:text-6xl lg:text-7xl"
+          className="display display-hero display-tight mt-1 text-gold-500"
         />
 
         <div className="mt-12 grid gap-6 border-t border-white/10 pt-10 sm:grid-cols-2 sm:gap-10">
