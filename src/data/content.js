@@ -291,77 +291,35 @@ export const social = [
 ];
 
 // ---------------------------------------------------------------------------
-// MEET THE FOUNDER
+// MEET THE TEAM
 //
-// Written from the three-paragraph biography the client supplied for this page.
-// The paragraphs are not printed whole: each one is split into the sentence
-// that carries it and the list it contains, so the page can *enumerate* the
-// expertise, the work and the opportunities instead of running them together
-// in prose the reader has to unpick. The words are the client's throughout —
-// nothing here is invented, and the sentences are only reflowed as lead-ins.
+// The page is the client's three biography paragraphs and her photograph, and
+// nothing else. An earlier version split those paragraphs into expertise chips,
+// numbered experience cards, an audiences strip and a separate vision section,
+// and wrote a page lede to introduce them. None of that was supplied, and the
+// client's instruction was to print the paragraphs as they are.
 //
-//   Paragraph 1 -> `lede` + `expertise`
-//   Paragraph 2 -> `work.lede` + `work.items` + `work.audiences`
-//   Paragraph 3 -> `vision.statement` + `vision.opportunities` + `vision.audience`
-//
-// `portrait` is null because no photograph of the founder has been supplied.
-// FounderHero falls back to a monogram medallion rather than to an empty
-// frame; set this to an image path and the photograph takes its place with no
-// other change.
+// So: no lede, no eyebrow copy, no derived lists. If this page needs more, the
+// words have to come from the client. `bio` is verbatim and in order.
 // ---------------------------------------------------------------------------
+
+const TEAM = "/assets/images/team";
+
 export const founder = {
-  title: "MEET THE FOUNDER",
   name: "Romesa Aqeel",
-  nameLines: ["Romesa", "Aqeel"],
-  initials: "RA",
   role: "Founder, Elevate",
-  lede: "A higher education and professional development specialist.",
-  portrait: null,
-  portraitAlt: null,
-
-  expertiseLabel: "Expertise",
-  expertise: [
-    "Academia–industry engagement",
-    "Research and innovation",
-    "Corporate partnerships",
-    "Event management",
-    "Stakeholder engagement",
+  // The photograph the client supplied for this page, cropped to 4:5 around
+  // her face so a portrait frame does not have to guess where it is.
+  portrait: `${TEAM}/romesa-aqeel.jpg`,
+  portraitAlt: "Romesa Aqeel, founder of Elevate, speaking into a microphone at an Elevate session.",
+  bio: [
+    "Romesa Aqeel is a higher education and professional development specialist with expertise in academia–industry engagement, research and innovation, corporate partnerships, event management, and stakeholder engagement.",
+    "With extensive experience managing academic and industry-facing initiatives, she has worked on strategic partnerships, professional events, innovation activities, institutional collaborations, and career-oriented programs, bringing together students, professionals, organizations, and academic stakeholders.",
+    "As the Founder of Elevate, her vision is to bridge the gap between academia and industry by creating opportunities for career counselling, mentorship, professional development, leadership, industry interaction, and meaningful networking for students and young professionals.",
   ],
+};
 
-  work: {
-    title: "EXPERIENCE",
-    lede: "Extensive experience managing academic and industry-facing initiatives.",
-    intro: "She has worked on:",
-    items: [
-      "Strategic partnerships",
-      "Professional events",
-      "Innovation activities",
-      "Institutional collaborations",
-      "Career-oriented programs",
-    ],
-    audiencesLabel: "Bringing together",
-    audiences: ["Students", "Professionals", "Organizations", "Academic stakeholders"],
-    // A clean frame from the client's own Learning Expo set — a session in
-    // progress, which is what "managing academic initiatives" actually looks
-    // like. Not captioned as the founder: nobody has identified who is in it.
-    image: `${EVENTS}/learning-expo/learning-expo-03.jpg`,
-    alt: "A facilitator standing at the front of a full computer lab at the Elevate Learning Expo, speaking to seated students with a slide about CV language projected behind her.",
-  },
-
-  vision: {
-    title: "HER VISION",
-    statement: "Bridge the gap between academia and industry.",
-    intro: "By creating opportunities for",
-    opportunities: [
-      "Career counselling",
-      "Mentorship",
-      "Professional development",
-      "Leadership",
-      "Industry interaction",
-      "Meaningful networking",
-    ],
-    audience: "for students and young professionals.",
-    image: `${EVENTS}/synergy-summit-2025/synergy-summit-2025-04.jpg`,
-    alt: "Guests and organisers standing together on stage at Synergy Summit 2025: Academia Meets Industry, as a commemorative shield is presented.",
-  },
+export const team = {
+  title: "MEET THE TEAM",
+  members: [founder],
 };

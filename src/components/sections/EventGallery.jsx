@@ -9,7 +9,7 @@ import { eventImageCount, eventItems, eventPartners } from "../../data/events";
 import { events } from "../../data/content";
 
 /**
- * The events archive: ten real events, 58 real photographs and posters.
+ * The events archive: eleven real events, 71 real photographs and posters.
  *
  * Laid out as large alternating editorial rows on white, the same shape as the
  * pillar rows on the home page. It was previously a dark navy field, which
@@ -48,6 +48,7 @@ const accents = [
   { text: "text-crimson-700", bar: "bg-crimson-500", soft: "bg-crimson-50", dot: "bg-crimson-500" },
   { text: "text-brand-700", bar: "bg-brand-500", soft: "bg-brand-50", dot: "bg-brand-500" },
   { text: "text-aqua-700", bar: "bg-aqua-500", soft: "bg-aqua-50", dot: "bg-aqua-500" },
+  { text: "text-leaf-700", bar: "bg-leaf-500", soft: "bg-leaf-50", dot: "bg-leaf-500" },
 ];
 
 /** Thumbnails shown before the grid collapses into a "+N more" tile. */
@@ -86,7 +87,10 @@ export default function EventGallery() {
 
       <ul className="mt-14 space-y-20 sm:mt-16 sm:space-y-28">
         {eventItems.map((item, eventIndex) => {
-          const accent = accents[eventIndex];
+          // Modulo, not a bare index: the archive grows, and an event past the
+          // end of this list would otherwise read `undefined.soft` and take the
+          // page down rather than merely repeating a colour.
+          const accent = accents[eventIndex % accents.length];
           const isPoster = item.kind === "poster";
           const [cover, ...rest] = item.images;
           const thumbs = rest.slice(0, THUMB_LIMIT);

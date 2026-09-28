@@ -164,6 +164,23 @@
     "width": 1280,
     "height": 847
   },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-15.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-15",
+    "widths": [
+      320,
+      544
+    ],
+    "width": 544,
+    "height": 473
+  },
+  "/assets/images/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-16.jpg": {
+    "base": "/assets/derived/events/career-counseling-govt-college-women-saudabad/career-counseling-govt-college-women-saudabad-16",
+    "widths": [
+      267
+    ],
+    "width": 267,
+    "height": 430
+  },
   "/assets/images/events/career-counseling-monotechnic-malir/career-counseling-monotechnic-malir-01.jpg": {
     "base": "/assets/derived/events/career-counseling-monotechnic-malir/career-counseling-monotechnic-malir-01",
     "widths": [
@@ -438,6 +455,124 @@
     "width": 720,
     "height": 960
   },
+  "/assets/images/events/research-ready-academia/research-ready-academia-01.jpg": {
+    "base": "/assets/derived/events/research-ready-academia/research-ready-academia-01",
+    "widths": [
+      320,
+      640,
+      1280,
+      1600
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/assets/images/events/research-ready-academia/research-ready-academia-02.jpg": {
+    "base": "/assets/derived/events/research-ready-academia/research-ready-academia-02",
+    "widths": [
+      320,
+      640,
+      1280,
+      1600
+    ],
+    "width": 1600,
+    "height": 1066
+  },
+  "/assets/images/events/research-ready-academia/research-ready-academia-03.jpg": {
+    "base": "/assets/derived/events/research-ready-academia/research-ready-academia-03",
+    "widths": [
+      320,
+      640,
+      1200
+    ],
+    "width": 1200,
+    "height": 736
+  },
+  "/assets/images/events/research-ready-academia/research-ready-academia-04.jpg": {
+    "base": "/assets/derived/events/research-ready-academia/research-ready-academia-04",
+    "widths": [
+      320,
+      640,
+      1280,
+      1600
+    ],
+    "width": 1600,
+    "height": 1200
+  },
+  "/assets/images/events/research-ready-academia/research-ready-academia-05.jpg": {
+    "base": "/assets/derived/events/research-ready-academia/research-ready-academia-05",
+    "widths": [
+      320,
+      640,
+      1280,
+      1600
+    ],
+    "width": 1600,
+    "height": 1066
+  },
+  "/assets/images/events/research-ready-academia/research-ready-academia-06.jpg": {
+    "base": "/assets/derived/events/research-ready-academia/research-ready-academia-06",
+    "widths": [
+      320,
+      640,
+      1280,
+      1600
+    ],
+    "width": 1600,
+    "height": 1066
+  },
+  "/assets/images/events/research-ready-academia/research-ready-academia-07.jpg": {
+    "base": "/assets/derived/events/research-ready-academia/research-ready-academia-07",
+    "widths": [
+      320,
+      640,
+      1160
+    ],
+    "width": 1160,
+    "height": 868
+  },
+  "/assets/images/events/research-ready-academia/research-ready-academia-08.jpg": {
+    "base": "/assets/derived/events/research-ready-academia/research-ready-academia-08",
+    "widths": [
+      320,
+      640,
+      1280,
+      1600
+    ],
+    "width": 1600,
+    "height": 1066
+  },
+  "/assets/images/events/research-ready-academia/research-ready-academia-09.jpg": {
+    "base": "/assets/derived/events/research-ready-academia/research-ready-academia-09",
+    "widths": [
+      320,
+      640,
+      1040
+    ],
+    "width": 1040,
+    "height": 541
+  },
+  "/assets/images/events/research-ready-academia/research-ready-academia-10.jpg": {
+    "base": "/assets/derived/events/research-ready-academia/research-ready-academia-10",
+    "widths": [
+      320,
+      640,
+      1280,
+      1600
+    ],
+    "width": 1600,
+    "height": 1066
+  },
+  "/assets/images/events/research-ready-academia/research-ready-academia-11.jpg": {
+    "base": "/assets/derived/events/research-ready-academia/research-ready-academia-11",
+    "widths": [
+      320,
+      640,
+      1280,
+      1600
+    ],
+    "width": 1600,
+    "height": 1066
+  },
   "/assets/images/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-01.jpg": {
     "base": "/assets/derived/events/russia-pakistan-science-innovation-ai/russia-pakistan-science-innovation-ai-01",
     "widths": [
@@ -625,5 +760,15 @@
     ],
     "width": 590,
     "height": 393
+  },
+  "/assets/images/team/romesa-aqeel.jpg": {
+    "base": "/assets/derived/team/romesa-aqeel",
+    "widths": [
+      320,
+      640,
+      819
+    ],
+    "width": 819,
+    "height": 1024
   }
 }

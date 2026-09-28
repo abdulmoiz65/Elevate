@@ -478,7 +478,7 @@
 
   /* The same ring, turning. Slow enough that it reads as a live object rather
      than as a loading spinner — a full turn takes the better part of a minute.
-     Used behind the founder monogram, where the four pillar colours standing
+     Used behind the team page portrait, where the four pillar colours standing
      in for a photograph is the whole point of the device. */
   .orbit-ring {
     animation: orbit-spin 48s linear infinite;
@@ -540,19 +540,20 @@
     text-transform: uppercase;
   }
 
-  /* Stacked display lines read as one block, so they lose the extra leading.
-     0.86 is set for lines the designer chose; on a phone the same heading
-     picks up wrapped lines it was never meant to have, and at that leading
-     they collide into a solid wall of caps. Loosened just enough below `sm`
-     that a wrapped line still reads as part of the same block. */
-  .display-tight {
-    line-height: 0.86;
-  }
+  /* Stacked display lines read as one block, so they lose the extra leading —
+     but not below the point where they stop being separate lines.
 
-  @media (width < 40rem) {
-    .display-tight {
-      line-height: 0.95;
-    }
+     Anton's caps fill roughly 0.73em of the em box, so at the 0.86 this used
+     to carry, a four-line hero left about a tenth of an em between the foot of
+     one line of caps and the head of the next: close enough that at 72px the
+     stack reads as a solid wall rather than four lines. It was already
+     loosened to 0.95 below `sm`, where wrapping made the collision obvious
+     first; the same collision was there at every width, just less crowded.
+
+     One value now, at every width, so the desktop stack has the same air the
+     phone one does. */
+  .display-tight {
+    line-height: 0.95;
   }
 
   /* --- Fluid display sizes -----------------------------------------------

@@ -30,7 +30,8 @@ public/
   favicon.svg
   assets/images/
     brand/                  Logo files
-    events/<slug>/          58 client-owned event photographs and posters
+    events/<slug>/          71 client-owned event photographs and posters
+    team/                   Portraits for the people on the Meet the Team page
     icons/                  15 original SVG line icons
   assets/derived/           GENERATED — WebP copies of the above at 320/640/1280/native
 src/
@@ -39,9 +40,9 @@ src/
   data/
     image-manifest.json     GENERATED — which derivative widths exist per source
     content.js              All site copy, generated from `ELEVATE content.docx`,
-                            plus the founder biography, the email address and
+                            plus the team biographies, the email address and
                             the social links the client supplied separately
-    events.js               10 events + 58 image records — GENERATED from disk
+    events.js               11 events + 71 image records — GENERATED from disk
     navigation.js           Nav links (must match the routes in App.jsx)
     chatbot.js              Every answer the chat assistant can give
   components/{layout,sections,ui}/
@@ -182,9 +183,10 @@ visit, and an AVIF tier.
 
 | Set | Count | Licence |
 |-----|-------|---------|
-| `events/` | 58 | Client-supplied. **Owned by ELEVATE**, no third-party rights |
+| `events/` | 71 | Client-supplied. **Owned by ELEVATE**, no third-party rights |
 | `icons/` | 15 | Original artwork drawn for this project |
-| `derived/` | 207 | Generated from the above — same licence as their sources |
+| `team/` | 1 | Client-supplied portrait. **Owned by ELEVATE** |
+| `derived/` | 254 | Generated from the above — same licence as their sources |
 
 **There is no stock photography on this site any more.** It used to carry six
 Unsplash photographs — a lecture hall, an office meeting, a volunteer with
@@ -218,30 +220,32 @@ trapped, Escape to close, arrow keys to move, scroll locked, focus returned to
 the thumbnail that opened it. Colour pairings are contrast-checked — see the
 rules above.
 
-## Meet the Founder
+## Meet the Team
 
-`/meet-founder` is the one page that does not use `PageHeader`: a founder page
-needs a second column for a face, so `FounderHero` is the page header written
-out, and it carries the `<h1>`.
+`/team` is two blocks: the standard `PageHeader`, and `TeamProfile` — the
+client's three biography paragraphs on the left, her photograph on the right.
 
-**No photograph of the founder has been supplied.** Rather than leave a grey
-rectangle where a portrait goes, the hero renders a monogram medallion — her
-initials on navy inside the logo's four pillar colours, turning slowly
-(`.orbit-ring`). Set `founder.portrait` and `founder.portraitAlt` in
-`content.js` to an image path and the photograph takes its place inside the
-same ring; nothing else changes.
+**That is the whole page, deliberately.** An earlier version split those
+paragraphs into expertise chips, five numbered experience cards, an audiences
+strip and a separate "her vision" section with its own tile grid, and wrote a
+page lede to introduce them. The client's instruction was to print the
+paragraphs as supplied and nothing else. Anything added to this page has to be
+words the client wrote — it is a real person's biography, so invented detail is
+a factual problem, not a placeholder one.
 
-The three supplied biography paragraphs are **not** printed whole. Each is
-split into the sentence that carries it and the list it contains, so the page
-enumerates the expertise, the work and the opportunities instead of running
-them together in prose. The words are the client's throughout — see the
-comment above `founder` in `content.js` for which fragment came from which
-paragraph.
+`team.members` is still an array and `TeamProfile` still maps over it, so a
+second person is an object in that array with `name`, `role`, `portrait`,
+`portraitAlt` and `bio`, and no layout work.
 
-The photographs on that page are real Elevate events and are **not** captioned
-as the founder. Nobody has identified the people in the client's photographs,
-and putting a name to a face on the strength of a guess is the one mistake on
-that page that would actually matter.
+The old path still resolves: `App.jsx` keeps a `<Navigate>` from
+`/meet-founder` to `/team`, so bookmarks and anything already linking to it
+land on the page rather than the 404.
+
+The portrait is the file the client supplied, cropped to 4:5 around her face so
+a portrait frame does not have to guess where it is. Photographs of *events*
+are never captioned as anyone in particular: nobody has identified the people
+in them, and putting a name to a face on the strength of a guess is the one
+mistake on that page that would actually matter.
 
 ## Not yet built
 
@@ -249,4 +253,4 @@ No verified impact figures, testimonials or partner logos exist, so the
 counter / testimonial / logo-wall devices the sector relies on are deliberately
 absent rather than filled with invented numbers. The contact form validates and
 confirms in the browser; swap the body of `handleSubmit` for a `fetch()` when an
-endpoint exists. No founder portrait exists either — see above.
+endpoint exists.
