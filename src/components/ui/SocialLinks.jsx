@@ -2,10 +2,10 @@ import Icon from "./Icon";
 import { contact, social } from "../../data/content";
 
 /**
- * The row of off-site links: email, Facebook, Instagram, LinkedIn.
+ * The row of off-site links: email, WhatsApp, Facebook, Instagram, LinkedIn.
  *
  * Each button takes a colour on hover rather than the one flat brand blue,
- * because four identical circles read as a single grey object and nobody aims
+ * because five identical circles read as a single grey object and nobody aims
  * at them. The colours are the site's own accent tokens, not the networks'
  * official hexes — `#1877F2` and the Instagram gradient would be the only two
  * values on the whole site that are not sampled from the logo, and they would
@@ -29,6 +29,19 @@ const links = [
     label: `Email Elevate at ${contact.email}`,
     external: false,
     hover: "hover:border-brand-600 hover:bg-brand-600",
+  },
+  {
+    // WhatsApp runs on the phone number, so it is built from `contact` here
+    // rather than listed in `social` — it is a way to reach the same line, not
+    // a separate profile. Leaf green is the site's own green; WhatsApp's
+    // #25D366 would be the one imported hex in the row.
+    name: "WhatsApp",
+    icon: "whatsapp",
+    href: contact.whatsappHref,
+    handle: contact.phone,
+    label: `Message Elevate on WhatsApp at ${contact.phone}`,
+    external: true,
+    hover: "hover:border-leaf-600 hover:bg-leaf-600",
   },
   ...social.map((item) => ({
     ...item,

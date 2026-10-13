@@ -64,10 +64,40 @@ export default function ContactSection({ withHeading = true }) {
             ))}
           </ul>
 
+          {/* The direct line, for readers who would rather not use a form. It
+              sits above the closing so the section still ends on the slogan. */}
+          <Reveal delay={480} className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <a
+              href={`mailto:${contact.email}`}
+              className="inline-flex items-center gap-2.5 font-medium text-ink-700 transition-colors hover:text-brand-700"
+            >
+              <Icon name="mail" className="h-4 w-4 shrink-0 text-brand-600" />
+              {contact.email}
+            </a>
+            <a
+              href={`tel:${contact.phoneHref}`}
+              className="inline-flex items-center gap-2.5 font-medium text-ink-700 transition-colors hover:text-brand-700"
+            >
+              <Icon name="phone" className="h-4 w-4 shrink-0 text-brand-600" />
+              {contact.phone}
+            </a>
+            {/* Same number, so it carries the label rather than repeating the
+                digits a third time in one row. */}
+            <a
+              href={contact.whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2.5 font-medium text-ink-700 transition-colors hover:text-leaf-700"
+            >
+              <Icon name="whatsapp" className="h-4 w-4 shrink-0 text-leaf-600" />
+              WhatsApp
+            </a>
+          </Reveal>
+
           <Reveal
             as="p"
-            delay={480}
-            className="mt-9 text-2xl font-semibold text-brand-700 sm:text-3xl"
+            delay={570}
+            className="mt-7 text-2xl font-semibold text-brand-700 sm:text-3xl"
           >
             {contact.closing}
           </Reveal>

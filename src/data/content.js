@@ -245,6 +245,12 @@ export const faq = {
   ],
 };
 
+// One line, three forms: printed with spaces, dialled without them, and handed
+// to wa.me as bare digits. Declared once up here so the number is typed in a
+// single place and the three fields below cannot drift apart.
+const PHONE = "+92 300 1231669";
+const PHONE_DIALABLE = "+923001231669";
+
 export const contact = {
   title: "CONTACT",
   lede: "Let's build bridges that create opportunities.",
@@ -252,6 +258,12 @@ export const contact = {
   calls: ["Partner with us.", "Volunteer with us.", "Mentor with us.", "Collaborate with us.", "Create impact with us."],
   closing: "Together, we Elevate.",
   email: "connection.elevate@gmail.com",
+  // `phone` is the form a reader sees; `phoneHref` is the same number with the
+  // spaces stripped, because tel: links have to be dialable. The line is on
+  // WhatsApp too — wa.me takes the international number with no "+" or spaces.
+  phone: PHONE,
+  phoneHref: PHONE_DIALABLE,
+  whatsappHref: `https://wa.me/${PHONE_DIALABLE.slice(1)}`,
   // Dropdown options, drawn from the audiences the CONTACT copy names above.
   roles: ["Student", "University", "Researcher", "Professional", "Company", "Entrepreneur", "Organization", "Community leader"],
   image: `${EVENTS}/world-entrepreneurship-day-2025/world-entrepreneurship-day-2025-02.jpg`,

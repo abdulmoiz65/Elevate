@@ -334,12 +334,13 @@ export const chatbot = {
       answer: [
         contact.lede,
         "The contact form is the fastest route — tell us which of these you are and what you are after, and it reaches the right person.",
+        `You can also write to ${contact.email}, or call or WhatsApp ${contact.phone}.`,
         contact.closing,
       ],
       bullets: contact.roles,
       link: { label: "Open the contact form", to: "/contact" },
       follow: ["get-involved", "partner", "volunteer", "details-not-published"],
-      keywords: ["contact", "email", "phone", "reach you", "get in touch", "talk to someone", "speak to a human", "address", "where are you", "enquiry", "inquiry"],
+      keywords: ["contact", "email", "phone", "phone number", "number", "call", "call you", "mobile", "whatsapp", "reach you", "get in touch", "talk to someone", "speak to a human", "address", "where are you", "enquiry", "inquiry"],
     },
 
     {

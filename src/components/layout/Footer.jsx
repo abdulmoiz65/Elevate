@@ -96,14 +96,25 @@ export default function Footer() {
             <p className="mt-5 max-w-xs text-pretty leading-relaxed text-ink-600">{contact.lede}</p>
 
             {/* Spelled out rather than hidden behind "email us" — an address a
-                reader can copy is worth more here than a tidier label. */}
-            <a
-              href={`mailto:${contact.email}`}
-              className="mt-5 inline-flex items-center gap-2.5 text-ink-700 transition-colors hover:text-brand-700"
-            >
-              <Icon name="mail" className="h-4 w-4 shrink-0 text-brand-600" />
-              {contact.email}
-            </a>
+                reader can copy is worth more here than a tidier label. The
+                phone number sits directly under it on its own line: the two
+                side by side wrapped mid-number on narrow screens. */}
+            <div className="mt-5 flex flex-col items-start gap-2.5">
+              <a
+                href={`mailto:${contact.email}`}
+                className="inline-flex items-center gap-2.5 text-ink-700 transition-colors hover:text-brand-700"
+              >
+                <Icon name="mail" className="h-4 w-4 shrink-0 text-brand-600" />
+                {contact.email}
+              </a>
+              <a
+                href={`tel:${contact.phoneHref}`}
+                className="inline-flex items-center gap-2.5 text-ink-700 transition-colors hover:text-brand-700"
+              >
+                <Icon name="phone" className="h-4 w-4 shrink-0 text-brand-600" />
+                {contact.phone}
+              </a>
+            </div>
 
             <SocialLinks className="mt-5" />
 
